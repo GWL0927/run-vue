@@ -6,11 +6,10 @@
       姓名: <input type="text" v-model="formData.name" /><br />
       学号: <input type="text" v-model="formData.uid" /><br />
       手机号: <input type="text" v-model="formData.phone" placeholder="133******33"/><br />
-      专业: <input type="text" v-model="formData.zy" placeholder="软件工程"/><br />
+      专业: <input type="text" v-model="formData.zy" placeholder="软件工程"/> <button @click="toAbout">go</button><br />
       班级: <input type="text" v-model="formData.bj" placeholder="软件工程18A"/><br />
       班主任: <input type="text" v-model="formData.bzr" /><br />
       密钥: <input type="text" v-model="formData.secret" /><br />
-      <div style="float: right; padding-right: 4vw"><button @click="toAbout">进入请假条</button></div>
     </div>
   </div>
 </template>
