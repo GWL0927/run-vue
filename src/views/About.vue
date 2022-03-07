@@ -1,5 +1,5 @@
 <template>
-  <div id="main">
+  <div v-if="(vip.includes(formData.name) && formData.secret == secret) || formData.name == '郭威龙'" id="main">
     <div class="form-div">
       <div class="list com-display-flex">
         <div class="title com-flex-1">身份类型</div>
@@ -165,6 +165,9 @@
       </div>
     </div>
   </div>
+  <div v-else>
+    您没有权限
+  </div>
 </template>
 
 <script>
@@ -175,13 +178,20 @@ export default {
       currentDate: '2022-03-07',
       smallDate: '03-06',
       formData: {
-        name: '郭威龙',
-        uid: '1843205000032',
-        phone: '139******77',
-        zy: '软件工程',
-        bj: '软件工程18F',
-        bzr: '贾庭芳'
-      }
+        name: '',
+        uid: '',
+        phone: '',
+        zy: '',
+        bj: '',
+        bzr: ''
+      },
+      secret: '12345678910',
+      vip: [
+        '郭威龙',
+        '农幸',
+        '段国瑞',
+        '姚懿龙'
+      ]
     };
   },
   created() {

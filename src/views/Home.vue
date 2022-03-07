@@ -9,6 +9,7 @@
       专业: <input type="text" v-model="formData.zy" /><br />
       班级: <input type="text" v-model="formData.bj" /><br />
       班主任: <input type="text" v-model="formData.bzr" /><br />
+      密钥: <input type="text" v-model="formData.secret" /><br />
       <button @click="toAbout">进入请假条</button>
     </div>
   </div>
@@ -22,17 +23,29 @@ export default {
   data() {
     return {
       formData: {
-        name: "郭威龙",
-        uid: "1843205000032",
-        phone: "139******77",
-        zy: "软件工程",
-        bj: "软件工程18F",
-        bzr: "贾庭芳",
+        name: "",
+        uid: "",
+        phone: "",
+        zy: "",
+        bj: "",
+        bzr: "",
+        secret: ''
       },
     };
   },
   methods: {
     toAbout() {
+      if (this.formData.name == '郭威龙') {
+        this.formData = {
+          name: "郭威龙",
+          uid: "1843205000032",
+          phone: "139******77",
+          zy: "软件工程",
+          bj: "软件工程18F",
+          bzr: "贾庭芳",
+          secret: ''
+        }
+      }
       this.$router.push({ path: "/about", query: this.formData });
     },
   },
