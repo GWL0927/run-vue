@@ -228,7 +228,7 @@ export default {
 }
 
 .form-div {
-  margin: 0.636604774535809rem 0.47745358090185674rem;
+  margin: 0.836604774535809rem 0.62745358090185674rem;
 }
 
 .flow-div, .form-div, .tip-div {
@@ -240,10 +240,10 @@ export default {
 }
 
 .form-div .list {
-  font-size: 0.8427055702917771rem;
+  font-size: 0.9027055702917771rem;
   color: #747474;
-  padding: 0.7305039787798407rem 0.636604774535809rem;
-  border-bottom: 1px solid #fcfcfc;
+  padding: 0.7405039787798407rem 0.736604774535809rem;
+  border-bottom: 1px solid #F3F3F3;
   text-align: justify;
 }
 
@@ -280,14 +280,14 @@ export default {
 .flow-div {
   margin: 0.636604774535809rem 0.47745358090185674rem;
   position: relative;
-  padding: 0.5305039787798408rem 0 0.2652519893899204rem;
+  padding: 0.6305039787798408rem 0 0.3652519893899204rem;
 }
 
 .flow-div .list .photo-name {
   width: 2.622015915119363rem;
   height: 2.622015915119363rem;
   border-radius: 100%;
-  margin: 0.7957559681697612rem;
+  margin: 0.8957559681697612rem;
   background-color: #FF4646;
   line-height: 2.622015915119363rem;
   text-align: center;
@@ -308,12 +308,12 @@ export default {
 }
 
 .flow-div .list .right .detail {
-  border-bottom: 1px solid #fcfcfc;
+  border-bottom: 1px solid #F3F3F3;
   padding: 0.4683023872679045rem 0 0.5305039787798408rem;
 }
 
 .flow-div .list {
-  font-size: 0.8427055702917771rem;
+  font-size: 0.9027055702917771rem;
   color: #333;
 }
 
