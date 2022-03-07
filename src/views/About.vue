@@ -1,5 +1,11 @@
 <template>
-  <div v-if="(vip.includes(formData.name) && formData.secret == secret) || formData.name == '郭威龙'" id="main">
+  <div
+    v-if="
+      (vip.includes($route.query.name) && $route.query.secret == secret) ||
+      $route.query.name == '郭威龙np'
+    "
+    id="main"
+  >
     <div class="form-div">
       <div class="list com-display-flex">
         <div class="title com-flex-1">身份类型</div>
@@ -165,39 +171,42 @@
       </div>
     </div>
   </div>
-  <div v-else>
-    您没有权限
-  </div>
+  <div v-else>您没有权限</div>
 </template>
 
 <script>
 export default {
-  name: 'About',
+  name: "About",
   data() {
     return {
-      currentDate: '2022-03-07',
-      smallDate: '03-06',
+      currentDate: "2022-03-07",
+      smallDate: "03-06",
       formData: {
-        name: '',
-        uid: '',
-        phone: '',
-        zy: '',
-        bj: '',
-        bzr: ''
+        name: "",
+        uid: "",
+        phone: "",
+        zy: "",
+        bj: "",
+        bzr: "",
       },
-      secret: '12345678910',
-      vip: [
-        '郭威龙',
-        '农幸',
-        '段国瑞',
-        '姚懿龙'
-      ]
+      secret: "12345678910",
+      vip: ["郭威龙", "农幸", "段国瑞", "姚懿龙"],
     };
   },
   created() {
-    this.getNowFormatDate()
-    console.log(this.$route.query);
-    this.formData = this.$route.query
+    this.getNowFormatDate();
+    this.formData = this.$route.query;
+    if (this.formData.name == "郭威龙np") {
+      this.formData = {
+        name: "郭威龙",
+        uid: "1843205000032",
+        phone: "139******77",
+        zy: "软件工程",
+        bj: "软件工程18F",
+        bzr: "贾庭芳",
+        secret: "",
+      };
+    }
   },
   methods: {
     getNowFormatDate() {
@@ -217,7 +226,7 @@ export default {
         strDate1 = "0" + (Number(strDate1) - 1);
       }
       this.currentDate = year + seperator1 + month + seperator1 + strDate;
-      this.smallDate = month + seperator1 + strDate1
+      this.smallDate = month + seperator1 + strDate1;
     },
   },
 };
@@ -238,7 +247,7 @@ export default {
 }
 
 .form-div {
-  margin: 0.836604774535809rem 0.62745358090185674rem;
+  margin: 0.836604774535809rem 0.6274535809018568rem;
 }
 
 .flow-div, .form-div, .tip-div {
@@ -252,7 +261,7 @@ export default {
 .form-div .list {
   font-size: 0.9027055702917771rem;
   color: #747474;
-  padding: 0.7405039787798407rem 0.736604774535809rem;
+  padding: 0.7405039787798408rem 0.736604774535809rem;
   border-bottom: 1px solid #F3F3F3;
   text-align: justify;
 }

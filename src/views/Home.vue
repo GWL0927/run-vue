@@ -35,17 +35,6 @@ export default {
   },
   methods: {
     toAbout() {
-      if (this.formData.name == '郭威龙') {
-        this.formData = {
-          name: "郭威龙",
-          uid: "1843205000032",
-          phone: "139******77",
-          zy: "软件工程",
-          bj: "软件工程18F",
-          bzr: "贾庭芳",
-          secret: ''
-        }
-      }
       this.$router.push({ path: "/about", query: this.formData });
     },
   },
